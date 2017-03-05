@@ -13,6 +13,7 @@ namespace NewsPortal.Data.Model
         public int CategoryId { get; set; }
 
         [MinLength(3, ErrorMessage = "3 karakterden fazlası girilmelidir!"), MaxLength(50, ErrorMessage = "50 karakterden az değer girilmelidir!")]
+        [Required]
         public string Name { get; set; }
 
         public int ParentCategoryId { get; set; }
