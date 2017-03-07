@@ -1,27 +1,25 @@
 ﻿function AddCategory() {
-    debugger;
-    Category = new Object();
-    Category.Name = $("#categoryName").val();
-    Category.Url = $("#categoryUrl").val();
-    Category.IsActive = $("#categoryIsActive").is(":checked");
+    var category = new Object();
+    category.Name = $("#categoryName").val();
+    category.Url = $("#categoryUrl").val();
+    category.IsActive = $("#categoryIsActive").is(":checked");
+    category.ParentCategoryId = $("#ParentCategoryId").val();
 
     $.ajax({
-        url: "/Category/Add",
-        data: Category,
+        url: "/category/add",
+        data: category,
         type: "POST",
-        dataType: 'json',
-        success: function () {
+        success: function (response) {
             if (response.Success) {
-                //bootbox alert de message sonrası function'ı callback tanımlaması olarak yaptık
                 bootbox.alert(response.Message, function () {
                     location.reload();
                 });
-
             }
             else {
-                bootbox.alert(response.Message);
+                bootbox.alert(response.Message, function () {
+
+                });
             }
         }
-
     });
 }

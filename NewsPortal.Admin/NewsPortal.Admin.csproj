@@ -133,12 +133,40 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\font-awesome.min.css" />
-    <Content Include="Content\main.css" />
-    <Content Include="Content\main.min.css" />
-    <Content Include="Content\plugins.min.css" />
-    <Content Include="Content\typicons.min.css" />
+    <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\css\font-awesome.min.css" />
+    <Content Include="Content\css\icheck\minimal%402x.png" />
+    <Content Include="Content\css\icheck\minimal.css" />
+    <Content Include="Content\css\icheck\minimal.png" />
+    <Content Include="Content\css\main.css" />
+    <Content Include="Content\css\main.min.css" />
+    <Content Include="Content\css\plugins.min.css" />
+    <Content Include="Content\css\typicons.min.css" />
+    <Content Include="Content\fonts\fontawesome-webfontba72.svg" />
+    <Content Include="Content\fonts\footable.svg" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\fonts\typicons.svg" />
+    <Content Include="Content\img\dark_wood.html" />
+    <Content Include="Content\img\loaders\loader1.gif" />
+    <Content Include="Content\img\loaders\loader10.gif" />
+    <Content Include="Content\img\loaders\loader11.gif" />
+    <Content Include="Content\img\loaders\loader12.gif" />
+    <Content Include="Content\img\loaders\loader13.gif" />
+    <Content Include="Content\img\loaders\loader14.gif" />
+    <Content Include="Content\img\loaders\loader15.gif" />
+    <Content Include="Content\img\loaders\loader16.gif" />
+    <Content Include="Content\img\loaders\loader17.gif" />
+    <Content Include="Content\img\loaders\loader2.gif" />
+    <Content Include="Content\img\loaders\loader3.gif" />
+    <Content Include="Content\img\loaders\loader4.gif" />
+    <Content Include="Content\img\loaders\loader5.gif" />
+    <Content Include="Content\img\loaders\loader6.gif" />
+    <Content Include="Content\img\loaders\loader7.gif" />
+    <Content Include="Content\img\loaders\loader8.gif" />
+    <Content Include="Content\img\loaders\loader9.gif" />
+    <Content Include="Content\img\logo.png" />
+    <Content Include="Content\img\tickc81e.html" />
+    <Content Include="Content\PagedList.css" />
     <Content Include="fonts\fontawesome-webfontba72.svg" />
     <Content Include="fonts\footable.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -236,6 +264,22 @@
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Category\Add.cshtml" />
     <Content Include="Views\Category\Index.cshtml" />
+    <Content Include="Content\fonts\fontawesome-webfontba72.eot" />
+    <Content Include="Content\fonts\fontawesome-webfontba72.ttf" />
+    <Content Include="Content\fonts\fontawesome-webfontba72.woff" />
+    <Content Include="Content\fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="Content\fonts\footable.eot" />
+    <Content Include="Content\fonts\footable.ttf" />
+    <Content Include="Content\fonts\footable.woff" />
+    <Content Include="Content\fonts\footabled41d.eot" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\fonts\glyphicons-halflings-regulard41d.eot" />
+    <Content Include="Content\fonts\typicons.eot" />
+    <Content Include="Content\fonts\typicons.ttf" />
+    <Content Include="Content\fonts\typicons.woff" />
+    <Content Include="Content\fonts\typiconsd41d.eot" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -245,7 +289,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\icheck\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
