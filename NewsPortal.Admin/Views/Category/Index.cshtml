@@ -1,8 +1,65 @@
-﻿
+﻿@model PagedList.IPagedList<NewsPortal.Data.Model.Category>
+@using PagedList.Mvc
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Category List";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<!-- Content start -->
+<div class="container-fluid">
+    
+    <div class="row">
+        <!-- Responsive table -->
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <header class="panel-heading">@ViewBag.Title</header>
+                <div class="panel-body">
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Category Name</th>
+                                    <th>Parent Category</th>
+                                    <th>Url</th>
+                                    <th>Is Active</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td><span class="label label-success">@item.CategoryId</span></td>
+                                        <td>@item.Name</td>
+                                        <td>@item.ParentCategoryId</td>
+                                        <td>@item.Url</td>
+                                        <td>
+                                            @if (item.IsActive)
+                                            {
+                                                <b class="label label-success">Active</b>
+                                            }
+                                            else
+                                            {
+                                                <b class="label label-danger">Passive</b>
+                                            }
+                                        </td>
+                                        <td>
+                                            @*<button class="btn btn-default btn-sm">Edit</button>*@
+                                            <a href="@Url.Action("Update","Category", new { CategoryId = item.CategoryId})" class="btn btn-default btn-sm">Edit</a>
+                                            <button class="btn btn-default btn-sm" onclick="DeleteCategory()" id="deleteCategory" data-id="@item.CategoryId">Delete</button>
+                                            @*@Html.ActionLink("Delete", "Delete", new { ID = item.CategoryId}, new { onclick="return confirm('are you sure want to delete this record?')"})*@
+                                        </td>
+                                    </tr>
+                                }
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Responsive table -->
+    </div>
+    @Html.PagedListPager(Model, p => Url.Action("Index",new { p}), PagedListRenderOptions.Classic)
+</div>
 
